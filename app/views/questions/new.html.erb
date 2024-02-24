@@ -1,0 +1,8 @@
+<%= form_with model: @question, url: questions_path , local: true do |f| %>
+<div class = "form-main" >
+  <%= f.text_area :title, class:"questioins-title", id:"questions-title", placeholder:"タイトル" %>
+  <%= f.text_area :content, class:"questioins-content", id:"questions-content", placeholder:"質問内容" %>
+  <%= f.text_area :contributor, class:"questioins-contributor", id:"questions-contributor", placeholder:"投稿者名" %>
+  <%= f.submit "POST" ,class:"post-btn" %>
+</div>
+<% end %>
