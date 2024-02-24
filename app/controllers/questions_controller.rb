@@ -9,7 +9,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = Question.new(question_params)
-    if @item.save
+    if @question.save
       redirect_to root_path
     else
       render :new, status: :unprocessable_entity
@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
   end
 
   private
-  
+
   def question_params
     params.require(:question).permit(:title, :content, :contributor)
   end
