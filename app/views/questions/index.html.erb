@@ -1,0 +1,8 @@
+<%= link_to "新規投稿" , new_question_path , class: "new-post-btn" %>
+<% @questions.each do |question| %>
+<div class = "post-content-list">
+  <div class = "question-title"> タイトル : <%= "#{question.title}" %> </div>
+  <div class = "question-content"> 内容 : <%= "#{question.content}" %> </div>
+  <div class = "question-contributor"> 投稿者名 : <%= "#{question.contributor}" %> </div>
+</div>
+<% end %>
