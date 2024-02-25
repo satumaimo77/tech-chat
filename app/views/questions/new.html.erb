@@ -1,3 +1,5 @@
+<%= render "shared/header" %>
+
 <%= form_with model: @question, url: questions_path , local: true do |f| %>
 <div class = "form-main" >
   <%= f.text_area :title, class:"questioins-title", id:"questions-title", placeholder:"タイトル" %>

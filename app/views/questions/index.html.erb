@@ -1,3 +1,5 @@
+<%= render "shared/header" %>
+
 <%= link_to "新規投稿" , new_question_path , class: "new-post-btn" %>
 <% @questions.each do |question| %>
 <div class = "post-content-list">
