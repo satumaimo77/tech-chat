@@ -1,9 +1,18 @@
 <%= render "shared/header" %>
-
-<% @questions.each do |question| %>
-<div class = "post-content-list">
-  <div class = "question-title"> タイトル : <%= "#{question.title}" %> </div>
-  <div class = "question-content"> 内容 : <%= "#{question.content}" %> </div>
-  <div class = "question-contributor"> 投稿者名 : <%= "#{question.contributor}" %> </div>
+<div class="main-body">
+  <% @questions.each do |question| %>
+  <div class = "question-content-lists">
+    <div class = "content-left">
+      <div class = "comments-counter"> 0 </div>
+      <div class = "comments-subscript"> comments </div>
+    </div>
+    <div class = "content-right">
+      <div class = "content-right-header">
+        <div class = "question-title"> <%= "#{question.title}" %> </div>
+        <div class = "question-contributor"> <%= "#{question.contributor}" %> </div>
+      </div>
+      <div class = "question-content"> <%= "#{question.content}" %> </div>
+    </div>
+  </div>
+  <% end %>
 </div>
-<% end %>
