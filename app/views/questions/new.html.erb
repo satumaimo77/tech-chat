@@ -1,8 +1,12 @@
-<%= form_with model: @question, url: questions_path , local: true do |f| %>
-<div class = "form-main" >
-  <%= f.text_area :title, class:"questioins-title", id:"questions-title", placeholder:"タイトル" %>
-  <%= f.text_area :content, class:"questioins-content", id:"questions-content", placeholder:"質問内容" %>
-  <%= f.text_area :contributor, class:"questioins-contributor", id:"questions-contributor", placeholder:"投稿者名" %>
-  <%= f.submit "POST" ,class:"post-btn" %>
+<%= render "shared/header" %>
+<div class ="main">
+  <%= form_with model: @question, url: questions_path , local: true do |f| %>
+  <div class = "form-header"></div>
+  <div class = "form-lists">
+    <%= f.text_area :title, class:"questions-title", id:"questions-title", placeholder:"タイトル" %>
+    <%= f.text_area :content, class:"questions-content", id:"questions-content", placeholder:"質問内容" %>
+    <%= f.text_area :contributor, class:"questions-contributor", id:"questions-contributor", placeholder:"投稿者名" %>
+    <%= f.submit "POST" ,class:"post-btn" %>
+  </div>
 </div>
 <% end %>
